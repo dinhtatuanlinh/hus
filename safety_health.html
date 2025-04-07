@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Chương trình đào tạo - Công nghệ Kỹ thuật Môi trường</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f4f9ff;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container-d {
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            /* Set fixed width */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .container-d h1 {
+            background-color: #f9a529;
+            /* Blue background */
+            color: white;
+            /* White text */
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .container-d .wrapper-1 .head .program {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container-d .head .program .subtitle {
+            font-style: italic;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+            background: #5b7327;
+            border-radius: 0 30px 30px 0;
+            padding: 5px 10px 5px 70px;
+            width: 350px;
+            font-weight: bolder;
+            margin-top: 20px
+        }
+
+        .container-d .head .program .title .line {
+            font-weight: bold;
+            font-size: 42px;
+            color: #0ea5e9; /* Tailwind sky-500 style */
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-shadow: 1px 1px 0 #005f7f;
+            padding-left: 30px;
+        }
+
+        .container-d .head .program .note {
+            font-size: 20px;
+            color: #888;
+            margin-top: 10px;
+            font-style: italic;
+            padding-left: 30px;
+        }
+
+
+        .container-d .wrapper-1 {
+            display: flex;
+            flex-direction: row;
+            align-self: start;
+            gap: 20px;
+        }
+
+
+        .container-d .wrapper-1 .section:first-child {
+            flex: 4;
+            margin: 20px 0 0;
+            border-radius: 20px;
+            position: relative;
+        }
+
+
+        .container-d .wrapper-1 .section:first-child h2 {
+            text-align: center;
+            color: #fff;
+            background-color: #a3d099;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-radius: 10px 10px 0 0;
+            line-height: 3;
+            font-weight: bolder;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(1) {
+            margin-right: 130px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(1) .info-grid {
+            border-left: 5px solid #00a2ff;
+            margin-top: 20px;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(1) .info-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(1) .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .qr-code {
+            grid-row: 1 / span 2;
+            /* span 2 rows vertically */
+            grid-column: 2;
+            padding-left: 10px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(1) .qr-code img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(1) .info-icon {
+            background-color: #eccf2d;
+            padding: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d1eaff;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(1) .info-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(2) {
+            position: relative;
+            margin-left: 100px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(2) img {
+            position: absolute;
+            width: 130px;
+            top: 100px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(2) h2 {
+            margin-top: -20px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(2) ul {
+            margin-left: 150px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) {
+
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) .box {
+            position: relative;
+            padding: 16px;
+            border-radius: 12px;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) .box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            /* Thickness of right border */
+            height: 100%;
+            background: linear-gradient(180deg, #eecc32, #a55c2c);
+            z-index: -1;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) .box .img-1 {
+            position: absolute;
+            top: -6px;
+            left: 0;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) .box .img-2 {
+            position: absolute;
+            top: 140px;
+            left: 0;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) .box .img-3 {
+            position: absolute;
+            top: 235px;
+            left: 0;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) .box .img-4 {
+            position: absolute;
+            top: 335px;
+            left: 0;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) .box ul {
+            list-style: none;
+            padding-left: 100px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .wrapper:nth-child(3) .box ul hr {
+            border: none;
+            border-top: 2px dashed #999;
+            margin: 20px 0;
+        }
+
+        .container-d .wrapper-1 .section:last-child {
+            flex: 3;
+            margin: 20px 0 0;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+        }
+
+        .container-d .wrapper-1 .section:last-child img:first-child {
+            position: absolute;
+            top: -200px;
+            right: -60px;
+        }
+
+        .container-d .wrapper-1 .section:last-child > h1 {
+            background-color: #f9a529;
+            /* Blue background */
+            color: white;
+            /* White text */
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 100px;
+        }
+
+        .container-d .wrapper-1 .section:last-child .box {
+            background-color: #f4f9ff;
+            border-left: 5px solid #00a2ff;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            padding: 60px;
+            position: relative;
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-container .credit {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-label {
+            background-color: #F8D442;
+            /* Yellow */
+            color: white;
+            padding: 8px 20px 8px 12px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+        }
+
+
+        .container-d .wrapper-1 .section:last-child .credit-label span {
+            white-space: nowrap;
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-label::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            width: 0;
+            height: 0;
+            border-top: 22px solid transparent;
+            border-bottom: 22px solid transparent;
+            border-left: 20px solid #F8D442;
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #E53935;
+            /* Red */
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+            gap: 10px;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            padding: 60px;
+            position: relative;
+        }
+        .container-d .wrapper-1 .section:last-child .wrapper > h1 {
+             background-color: #f9a529;
+             /* Blue background */
+             color: white;
+             /* White text */
+             font-weight: bold;
+             text-transform: uppercase;
+             font-size: 18px;
+             text-align: center;
+             padding: 10px 25px;
+             border-radius: 30px;
+             display: inline-block;
+             /*margin-top: 100px;*/
+         }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .atom {
+            position: absolute;
+            top: 120px;
+            right: 50px;
+            width: 100px;
+            height: 120px;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .credit {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            position: absolute;
+            top: 150px;
+            left: 30px;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .credit-label {
+            background-color: #81b719;
+            /* Yellow */
+            color: white;
+            padding: 8px 20px 8px 12px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .credit-label span {
+            white-space: nowrap;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .credit-label::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            width: 0;
+            height: 0;
+            border-top: 22px solid transparent;
+            border-bottom: 22px solid transparent;
+            border-left: 20px solid #81b719;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .credit-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #E53935;
+            /* Red */
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .title {
+            position: absolute;
+            top: 250px;
+            left: 78px;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .section-title {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 17px 20px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            display: inline-block;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .section-title::after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-top: 32px solid transparent;
+            border-bottom: 32px solid transparent;
+            border-left: 20px solid #4CAF50;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .list-container {
+            border-left: 3px solid #4CAF50;
+            margin-left: 18px;
+            padding-left: 30px;
+            margin-top: 200px;
+            position: relative;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .list-item {
+            background-color: #e9f5e9;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .list-item::before {
+            content: "";
+            position: absolute;
+            left: -34px;
+            top: 14px;
+            width: 12px;
+            height: 12px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        /*#################################*/
+        .container-d .wrapper-1 .section:last-child .wrapper img {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            right: 0;
+            top: 620px
+        }
+        .container-d .wrapper-1 .section:last-child .wrapper .wrapper-score {
+
+        }
+        .container-d .wrapper-1 .section:last-child .wrapper .wrapper-score .section-title {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 19px 20px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .wrapper-score .section-title::after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-top: 32px solid transparent;
+            border-bottom: 32px solid transparent;
+            border-left: 20px solid #4CAF50;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .timeline {
+            border-left: 3px solid #4CAF50;
+            margin-left: 18px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .timeline-item {
+            background-color: #e9f5e9;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-bottom: 12px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 220px;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -34px;
+            top: 14px;
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border: 2px solid #4CAF50;
+            border-radius: 50%;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .year {
+            font-weight: bold;
+        }
+
+        .container-d .wrapper-1 .section:last-child .wrapper .score {
+            color: #333;
+        }
+
+        .container-d .wrapper-2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+        }
+        .container-d .wrapper-2 img:nth-child(1) {
+            position: absolute;
+            top: 55px;
+            left: 335px;
+            width: 50px;
+        }
+        .container-d .wrapper-2 img:nth-child(2) {
+            position: absolute;
+            top: 50px;
+            left: 530px;
+            width: 50px;
+        }
+        .container-d .wrapper-2 img:nth-child(3) {
+            position: absolute;
+            top: 20px;
+            left: 720px;
+            width: 50px;
+        }
+        .container-d .wrapper-2 img:nth-child(4) {
+            position: absolute;
+            bottom: 20px;
+            right: 200px;
+            width: 50px;
+        }
+        .container-d .wrapper-2 img:nth-child(5) {
+            position: absolute;
+            bottom: 50px;
+            left: 370px;
+            width: 50px;
+        }
+        .container-d .wrapper-2 img:nth-child(6) {
+            position: absolute;
+            bottom: 30px;
+            left: 570px;
+            width: 50px;
+        }
+        .container-d .wrapper-2 img:nth-child(7) {
+            position: absolute;
+            bottom: 30px;
+            left: 760px;
+            width: 50px;
+        }
+        .container-d .wrapper-2 img:nth-child(8) {
+            position: absolute;
+            bottom: 50px;
+            left: 185px;
+            width: 50px;
+        }
+        .container-d .wrapper-2 h1 {
+            position: absolute;
+            top: 0;
+            left: 200px;
+        }
+        .container-d .wrapper-2 .box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 200px;
+
+        }
+        .container-d .wrapper-2 .box .item {
+            flex: 1;
+            margin: 10px;
+            background-color: rgba(185, 185, 185, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .container-d .wrapper-2 img:nth-child(11) {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 200px;
+        }
+        /*#################################*/
+
+
+
+
+        .container-d .footer {
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
+            color: #f8d254;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background: #0e3e62;
+        }
+
+        .container-d .footer p {
+            margin: 0 20px;
+        }
+
+        .container-d .footer p a {
+            text-decoration: none;
+            color: #f8d254;
+        }
+
+
+        .container-d .info-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto auto auto;
+            gap: 15px;
+            align-items: start;
+        }
+
+
+        @media screen and (min-width: 768px) {
+            .container-m {
+                display: none !important;
+            }
+        }
+
+        /* === Base Container === */
+        .container-m {
+            width: 100%;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #212121;
+            background-color: #ffffff;
+        }
+
+        /* === Header === */
+        .container-m .head {
+            text-align: center;
+        }
+
+        .container-m .program {
+            padding: 0 12px;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .container-m .subtitle {
+            background-color: #46661b;
+            color: #ffffff;
+            padding: 8px 16px;
+            font-style: italic;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .container-m .title {
+            margin-top: 8px;
+        }
+
+        .container-m .line {
+            font-size: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #0ea5e9;
+            text-shadow: 0 1px 1px #005a7a;
+        }
+
+        .container-m .note {
+            font-size: 14px;
+            color: #757575;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        /* === Structure === */
+        .container-m .wrapper-1,
+        .container-m .section,
+        .container-m .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .container-m .wrapper {
+            background-color: #f4f7fb;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        /* === Info Grid === */
+        .container-m .wrapper:first-of-type .box {
+            border-left: 4px solid #2196f3;
+            padding: 16px;
+            border-radius: 0 0 10px 10px;
+            background-color: #eaf6fc;
+        }
+
+        .container-m .info-content {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .container-m .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .container-m .info-icon {
+            background-color: #ffdf2b;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #cce7ff;
+        }
+
+        .container-m .info-icon img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .container-m .qr-fixed {
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .container-m .qr-fixed img {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* === Admission === */
+        .container-m .wrapper:nth-of-type(2) .box {
+            border-left: 4px solid #00a2ff;
+            padding: 16px;
+            background: #ffffff;
+            border-radius: 10px;
+        }
+
+        .container-m .wrapper:nth-of-type(2) .box img {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .container-m .wrapper:nth-of-type(2) .box ul {
+            padding-left: 18px;
+        }
+
+        .container-m .wrapper:nth-of-type(2) .box li {
+            margin-bottom: 8px;
+        }
+
+        /* === Career === */
+        .container-m .wrapper:nth-of-type(3) .box {
+            padding: 16px;
+            border-left: 4px solid #00a2ff;
+            border-radius: 10px;
+            background: #f1f1f1;
+        }
+
+        .container-m .wrapper:nth-of-type(3) .box img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .container-m .wrapper:nth-of-type(3) .box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .container-m .wrapper:nth-of-type(3) .box hr {
+            border: none;
+            border-top: 1px dashed #ccc;
+            margin: 12px 0;
+        }
+
+        /* === Goals === */
+        .container-m .section:nth-of-type(2) .box {
+            padding: 16px;
+            border-left: 4px solid #00a2ff;
+            background: #e3f1fb;
+            border-radius: 10px;
+        }
+
+        .container-m .section:nth-of-type(2) .box ul {
+            padding-left: 18px;
+        }
+
+        .container-m .section:nth-of-type(2) .box li {
+            margin-bottom: 8px;
+        }
+
+        /* === Specializations === */
+        .container-m .list-container {
+            border-left: 3px solid #4caf50;
+            padding-left: 16px;
+        }
+
+        .container-m .list-item {
+            background-color: #e0f6e0;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .container-m .list-item::before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 14px;
+            width: 10px;
+            height: 10px;
+            background-color: #4caf50;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        /* === Timeline === */
+        .container-m .wrapper-score .section-title {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .container-m .timeline {
+            border-left: 3px solid #4caf50;
+            padding-left: 16px;
+        }
+
+        .container-m .timeline-item {
+            background: #def5de;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .container-m .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 14px;
+            width: 10px;
+            height: 10px;
+            background: #ffffff;
+            border: 2px solid #4caf50;
+            border-radius: 50%;
+        }
+
+        .container-m .year {
+            font-weight: 600;
+        }
+
+        .container-m .score {
+            color: #444;
+        }
+
+        /* === Scholarships === */
+        .container-m .wrapper-2 .box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 16px;
+            background: #fdfdfd;
+            border-radius: 10px;
+        }
+
+        .container-m .wrapper-2 .item {
+            background-color: rgba(185, 185, 185, 0.1);
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        /* === Footer === */
+        .container-m .footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 24px;
+            background-color: #0e3e62;
+            color: #f8d254;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .container-m .footer a {
+            color: #f8d254;
+            text-decoration: none;
+        }
+
+        .container-m .wrapper-1 .section:first-child h2 {
+            text-align: center;
+            color: #fff;
+            background-color: #a3d099;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-radius: 10px 10px 0 0;
+            line-height: 3;
+            font-weight: bolder;
+        }
+        .container-m .wrapper-1 .section:first-child .wrapper:nth-child(2) .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-m .wrapper-1 .section:first-child .wrapper:nth-child(2) .box img {
+            width: 150px;
+            margin: 0 auto;
+        }
+        .container-m .wrapper-1 .section:first-child .wrapper:nth-child(3) .box {
+            position: relative;
+        }
+
+        .container-m .wrapper-1 .section:first-child .wrapper:nth-child(3) .box img:nth-child(1) {
+            position: absolute;
+            width: 50px;
+            left: 0;
+            top: 0;
+        }
+        .container-m .wrapper-1 .section:first-child .wrapper:nth-child(3) .box img:nth-child(2) {
+            position: absolute;
+            width: 50px;
+            left: 0;
+            top: 173px;
+        }
+        .container-m .wrapper-1 .section:first-child .wrapper:nth-child(3) .box img:nth-child(3) {
+            position: absolute;
+            width: 50px;
+            left: 0;
+            top: 319px;
+        }
+        .container-m .wrapper-1 .section:first-child .wrapper:nth-child(3) .box img:nth-child(4) {
+            position: absolute;
+            width: 50px;
+            left: 0;
+            top: 511px;
+        }
+        .container-m .wrapper-1 .section:first-child .wrapper:nth-child(3) .box ul {
+            margin-left: 50px;
+        }
+
+        .container-m .wrapper-1 .section:last-child .wrapper .credit {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            position: absolute;
+            top: 150px;
+            left: 30px;
+        }
+
+        .container-m .wrapper-1 .section:last-child .wrapper .credit-label {
+            background-color: #81b719;
+            /* Yellow */
+            color: white;
+            padding: 8px 20px 8px 12px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .container-m .wrapper-1 .section:last-child .wrapper .credit-label span {
+            white-space: nowrap;
+        }
+
+        .container-m .wrapper-1 .section:last-child .wrapper .credit-label::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            width: 0;
+            height: 0;
+            border-top: 22px solid transparent;
+            border-bottom: 22px solid transparent;
+            border-left: 20px solid #81b719;
+        }
+        .container-m .wrapper-1 .section:last-child .wrapper {
+            position: relative;
+        }
+        .container-m .wrapper-1 .section:last-child .wrapper .credit-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #E53935;
+            /* Red */
+        }
+        .container-m .wrapper-1 .section:last-child .wrapper .atom {
+            width: 100px;
+            margin: -25px auto 0;
+
+        }
+        .container-md .wrapper-1 .section:last-child .wrapper .title {
+            position: absolute;
+            top: 250px;
+            left: 78px;
+        }
+
+        .container-m .wrapper-1 .section:last-child .wrapper .section-title {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 17px 20px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            display: inline-block;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .container-m .wrapper-1 .section:last-child .wrapper .section-title::after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-top: 32px solid transparent;
+            border-bottom: 32px solid transparent;
+            border-left: 20px solid #4CAF50;
+        }
+        .container-m .wrapper-1 .section:last-child .wrapper > h1 {
+            background-color: #f9a529;
+
+            color: white;
+
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+
+        }
+        .container-m .wrapper-1 .section:last-child > h1 {
+            background-color: #f9a529;
+            /* Blue background */
+            color: white;
+            /* White text */
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 100px;
+        }
+        .container-m h1 {
+            background-color: #f9a529;
+            /* Blue background */
+            color: white;
+            /* White text */
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .container-m .wrapper-2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-m .wrapper-2 img:nth-child(1) {
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: 50px;
+        }
+        .container-m .wrapper-2 img:nth-child(2) {
+            position: absolute;
+            top: 180px;
+            right: 0;
+            width: 50px;
+        }
+        .container-m .wrapper-2 img:nth-child(3) {
+            position: absolute;
+            top: 290px;
+            right: 0;
+            width: 50px;
+        }
+        .container-m .wrapper-2 img:nth-child(4) {
+            position: absolute;
+            top: 400px;
+            right: 0;
+            width: 50px;
+        }
+        .container-m .wrapper-2 img:nth-child(5) {
+            position: absolute;
+            top: 132px;
+            left: -18px;
+            width: 50px;
+        }
+        .container-m .wrapper-2 img:nth-child(6) {
+            position: absolute;
+            top: 210px;
+            left: -18px;
+            width: 50px;
+        }
+        .container-m .wrapper-2 img:nth-child(7) {
+            position: absolute;
+            top: 318px;
+            left: -18px;
+            width: 50px;
+        }
+        .container-m .wrapper-2 img:nth-child(8) {
+            position: absolute;
+            top: 45px;
+            left: -18px;
+            width: 50px;
+        }
+        .container-m .wrapper-2 img:nth-child(11) {
+            margin: 0 auto;
+            width: 150px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container-d {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-m">
+    <div class="head">
+        <div class="program">
+            <div class="subtitle">Chương trình đào tạo</div>
+            <div class="title">
+                <div class="line">MÔI TRƯỜNG, SỨC KHOẺ VÀ AN TOÀN</div>
+            </div>
+            <div class="note">(Occupational Safety, Health and Environment - OSHE)</div>
+        </div>
+    </div>
+    <div class="wrapper-1">
+        <div class="section">
+            <div class="wrapper">
+                <h2>Thông tin chung</h2>
+                <div class="box info-grid">
+                    <div class="info-content">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/document--v1.png" alt="icon"/>
+                            </div>
+                            <span>Mã số ngành đào tạo: <strong>7859003QTD</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
+                            </div>
+                            <span>Mã tuyển sinh: <strong>QHT82</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/diploma.png" alt="icon"/>
+                            </div>
+                            <span>Trình độ đào tạo: <strong>Đại học (Cử nhân)</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/time.png" alt="icon"/>
+                            </div>
+                            <span>Thời gian đào tạo: <strong>4,5 năm</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/university.png" alt="icon"/>
+                            </div>
+                            <span>Đơn vị đào tạo:
+                                <strong>Trường ĐH Khoa học Tự nhiên, ĐHQGHN</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/idea.png" alt="icon"/>
+                            </div>
+                            <span>Triết lý giáo dục:
+                                <strong>Học để ứng dụng - Học từ thực tiễn</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="icon"/>
+                            </div>
+                            <span>Học phí dự kiến năm học 2025-2026:
+                                <strong>1.600.000 - 1.700.000đ/tháng</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="qr-fixed">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=7510406&size=100x100"
+                             alt="QR Code"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <h2>PHƯƠNG THỨC TUYỂN SINH</h2>
+                <div class="box">
+                    <img src="safety_health_imgs/chi-tieu.png" alt="">
+                    <ul>
+                        <li>Xét tuyển thẳng theo quy định của Quy chế tuyển sinh (Điều 8)</li>
+                        <li>Xét tuyển thẳng theo Đề án của Trường ĐHKHTN</li>
+                        <li>Xét kết quả thi tốt nghiệp THPT (A00, A01, B00, D07, C02)</li>
+                        <li>Thi đánh giá năng lực của ĐHQGHN</li>
+                        <li>Chỉ sử dụng chứng chỉ quốc tế để xét tuyển</li>
+                        <li>Kết hợp kết quả thi tốt nghiệp THPT với chứng chỉ quốc tế để xét tuyển</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <h1>Cơ hội nghề nghiệp</h1>
+                <div class="box">
+                    <img class="img-1" src="safety_health_imgs/job-1.png" alt="">
+                    <img class="img-2" src="safety_health_imgs/job-2.png" alt="">
+                    <img class="img-3" src="safety_health_imgs/job-3.png" alt="">
+                    <img class="img-4" src="safety_health_imgs/job-4.png" alt="">
+                    <ul>
+                        <li>
+                            <hr>
+                            Công tác trong lĩnh vực về môi trường, sức khỏe và an toàn tại các doanh nghiệp, nhà máy,
+                            khu công nghiệp, cơ sở sản xuất, các tổ chức trong nước và quốc tế, các dự án phát triển...
+                        </li>
+                        <li>
+                            <hr>
+                            Công tác tại các cơ quan quản lý nhà nước, cơ quan thanh tra, kiểm tra về môi trường, an
+                            toàn lao động, sức khỏe nghề nghiệp, vệ sinh môi trường
+                        </li>
+                        <li>
+                            <hr>
+                            Giảng dạy và nghiên cứu tại các trường đại học, các viện nghiên cứu, các tổ chức quốc tế,
+                            tập đoàn đa quốc gia, trung tâm/doanh nghiệp tư vấn về lĩnh vực môi trường, sức khỏe nghề
+                            nghiệp và an toàn lao động
+                        </li>
+                        <li>
+                            <hr>
+                            Tiếp tục học sau đại học tại các trường đại học uy tín trong nước và ngoài nước thuộc các
+                            ngành phù hợp
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="safety_health_imgs/banner.png" alt="">
+            <h1>Mục tiêu đào tạo</h1>
+            <div class="box">
+                <ul>
+                    <li>Trang bị cho sinh viên kiến thức chuyên môn về lĩnh vực môi trường, sức khỏe nghề nghiệp và an
+                        toàn lao động.
+                    </li>
+                    <li>Nắm vững nguyên lý, quy luật tự nhiên, kiến thức cơ bản về khoa học xã hội, chính trị và pháp
+                        luật để ứng dụng trong lĩnh vực môi trường, sức khỏe và an toàn.
+                    </li>
+                    <li>Nắm vững các nguyên lý, kỹ thuật để quản lý giám sát về an toàn môi trường, an toàn trong lao
+                        động và sản xuất, bảo vệ sức khỏe người lao động.
+                    </li>
+                    <li>Chịu trách nhiệm trong truyền bá kiến thức và giải quyết những vấn đề môi trường, sức khỏe nghề
+                        nghiệp và an toàn lao động.
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper">
+                <h1>Chương trình đào tạo</h1>
+                <div class="credit">
+                    <div class="credit-label">
+                        <span>Tổng số tín chỉ</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="credit-value">150</div>
+                </div>
+                <img class="atom" src="safety_health_imgs/book.png" alt="">
+
+                <div class="title">
+                    <div class="section-title">Các hướng đào tạo chuyên sâu</div>
+                </div>
+
+
+                <div class="list-container">
+                    <div class="list-item">Quản lý và kiếm soát an toàn môi trường</div>
+                    <div class="list-item">Quản lý An toàn lao động</div>
+                    <div class="list-item">Quản lý sức khỏe nghề nghiệp người lao động</div>
+                </div>
+                <img src="safety_health_imgs/studying.png" alt="">
+                <div class="wrapper-score">
+                    <div class="section-title">Điểm chuẩn các năm gần đây</div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="year">2022</div>
+                            <div class="score">21.15 điểm</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2023</div>
+                            <div class="score">20 điểm</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2024</div>
+                            <div class="score">20 điểm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper-2">
+        <img src="safety_health_imgs/salary.png" alt="graduate">
+        <img src="safety_health_imgs/salary.png" alt="graduate">
+        <img src="safety_health_imgs/salary.png" alt="graduate">
+        <img src="safety_health_imgs/salary.png" alt="graduate">
+        <img src="safety_health_imgs/item-1.png" alt="">
+        <img src="safety_health_imgs/item-2.png" alt="">
+        <img src="safety_health_imgs/item-3.png" alt="">
+        <img src="safety_health_imgs/item-4.png" alt="">
+        <h1>CƠ HỘI HỌC BỔNG</h1>
+        <div class="box">
+            <div class="item">
+                Học bổng khuyến khích của trường và ĐHQGHN
+            </div>
+            <div class="item">
+                Học bổng từ các nhà tài: Toshiba, Honda, Mitsubishi...
+            </div>
+            <div class="item">
+                Học bổng hỗ trợ sinh viên thuộc diện gia đình chính sách, dân tộc thiểu số, hộ nghèo...
+            </div>
+            <div class="item">
+                Cơ hội nhận Học bổng từ Hội sức khỏe nơi làm việc không biên giới – Chi nhánh Hoa Kỳ (WHWB)
+            </div>
+        </div>
+        <img src="env_sci_imgs/graduate.png" alt="">
+    </div>
+
+    <div class="footer">
+        <p>FB: <a href="https://www.facebook.com/fes.hus.vnu">https://www.facebook.com/fes.hus.vnu</a></p>
+        <p>Website: <a href="https://tuyensinh.hus.vnu.edu.vn">https://tuyensinh.hus.vnu.edu.vn</a></p>
+        <p>TikTok: <a href="https://www.tiktok.com/@fesforthebest">https://www.tiktok.com/@fesforthebest</a></p>
+    </div>
+
+</div>
+<div class="container-d">
+    <div class="head">
+        <div class="program">
+            <div class="subtitle">Chương trình đào tạo</div>
+            <div class="title">
+                <div class="line">MÔI TRƯỜNG, SỨC KHOẺ VÀ AN TOÀN</div>
+            </div>
+            <div class="note">(Occupational Safety, Health and Environment - OSHE)</div>
+        </div>
+    </div>
+    <div class="wrapper-1">
+        <div class="section">
+            <div class="wrapper">
+                <h2>Thông tin chung</h2>
+                <div class="box info-grid">
+                    <div class="info-content">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/document--v1.png" alt="icon"/>
+                            </div>
+                            <span>Mã số ngành đào tạo: <strong>7859003QTD</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
+                            </div>
+                            <span>Mã tuyển sinh: <strong>QHT82</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/diploma.png" alt="icon"/>
+                            </div>
+                            <span>Trình độ đào tạo: <strong>Đại học (Cử nhân)</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/time.png" alt="icon"/>
+                            </div>
+                            <span>Thời gian đào tạo: <strong>4,5 năm</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/university.png" alt="icon"/>
+                            </div>
+                            <span>Đơn vị đào tạo:
+                                <strong>Trường ĐH Khoa học Tự nhiên, ĐHQGHN</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/idea.png" alt="icon"/>
+                            </div>
+                            <span>Triết lý giáo dục:
+                                <strong>Học để ứng dụng - Học từ thực tiễn</strong></span>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="icon"/>
+                            </div>
+                            <span>Học phí dự kiến năm học 2025-2026:
+                                <strong>1.600.000 - 1.700.000đ/tháng</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="qr-fixed">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=7510406&size=100x100"
+                             alt="QR Code"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <h2>PHƯƠNG THỨC TUYỂN SINH</h2>
+                <div class="box">
+                    <img src="safety_health_imgs/chi-tieu.png" alt="">
+                    <ul>
+                        <li>Xét tuyển thẳng theo quy định của Quy chế tuyển sinh (Điều 8)</li>
+                        <li>Xét tuyển thẳng theo Đề án của Trường ĐHKHTN</li>
+                        <li>Xét kết quả thi tốt nghiệp THPT (A00, A01, B00, D07, C02)</li>
+                        <li>Thi đánh giá năng lực của ĐHQGHN</li>
+                        <li>Chỉ sử dụng chứng chỉ quốc tế để xét tuyển</li>
+                        <li>Kết hợp kết quả thi tốt nghiệp THPT với chứng chỉ quốc tế để xét tuyển</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <h1>Cơ hội nghề nghiệp</h1>
+                <div class="box">
+                    <img class="img-1" src="safety_health_imgs/job-1.png" alt="">
+                    <img class="img-2" src="safety_health_imgs/job-2.png" alt="">
+                    <img class="img-3" src="safety_health_imgs/job-3.png" alt="">
+                    <img class="img-4" src="safety_health_imgs/job-4.png" alt="">
+                    <ul>
+                        <li>
+                            <hr>
+                            Công tác trong lĩnh vực về môi trường, sức khỏe và an toàn tại các doanh nghiệp, nhà máy,
+                            khu công nghiệp, cơ sở sản xuất, các tổ chức trong nước và quốc tế, các dự án phát triển...
+                        </li>
+                        <li>
+                            <hr>
+                            Công tác tại các cơ quan quản lý nhà nước, cơ quan thanh tra, kiểm tra về môi trường, an
+                            toàn lao động, sức khỏe nghề nghiệp, vệ sinh môi trường
+                        </li>
+                        <li>
+                            <hr>
+                            Giảng dạy và nghiên cứu tại các trường đại học, các viện nghiên cứu, các tổ chức quốc tế,
+                            tập đoàn đa quốc gia, trung tâm/doanh nghiệp tư vấn về lĩnh vực môi trường, sức khỏe nghề
+                            nghiệp và an toàn lao động
+                        </li>
+                        <li>
+                            <hr>
+                            Tiếp tục học sau đại học tại các trường đại học uy tín trong nước và ngoài nước thuộc các
+                            ngành phù hợp
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="safety_health_imgs/banner.png" alt="">
+            <h1>Mục tiêu đào tạo</h1>
+            <div class="box">
+                <ul>
+                    <li>Trang bị cho sinh viên kiến thức chuyên môn về lĩnh vực môi trường, sức khỏe nghề nghiệp và an
+                        toàn lao động.
+                    </li>
+                    <li>Nắm vững nguyên lý, quy luật tự nhiên, kiến thức cơ bản về khoa học xã hội, chính trị và pháp
+                        luật để ứng dụng trong lĩnh vực môi trường, sức khỏe và an toàn.
+                    </li>
+                    <li>Nắm vững các nguyên lý, kỹ thuật để quản lý giám sát về an toàn môi trường, an toàn trong lao
+                        động và sản xuất, bảo vệ sức khỏe người lao động.
+                    </li>
+                    <li>Chịu trách nhiệm trong truyền bá kiến thức và giải quyết những vấn đề môi trường, sức khỏe nghề
+                        nghiệp và an toàn lao động.
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper">
+                <h1>Chương trình đào tạo</h1>
+                <div class="credit">
+                    <div class="credit-label">
+                        <span>Tổng số tín chỉ</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="credit-value">150</div>
+                </div>
+                <img class="atom" src="safety_health_imgs/book.png" alt="">
+
+                <div class="title">
+                    <div class="section-title">Các hướng đào tạo chuyên sâu</div>
+                </div>
+
+
+                <div class="list-container">
+                    <div class="list-item">Quản lý và kiếm soát an toàn môi trường</div>
+                    <div class="list-item">Quản lý An toàn lao động</div>
+                    <div class="list-item">Quản lý sức khỏe nghề nghiệp người lao động</div>
+                </div>
+                <img src="safety_health_imgs/studying.png" alt="">
+                <div class="wrapper-score">
+                    <div class="section-title">Điểm chuẩn các năm gần đây</div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="year">2022</div>
+                            <div class="score">21.15 điểm</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2023</div>
+                            <div class="score">20 điểm</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2024</div>
+                            <div class="score">20 điểm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper-2">
+        <img src="safety_health_imgs/salary.png" alt="graduate">
+        <img src="safety_health_imgs/salary.png" alt="graduate">
+        <img src="safety_health_imgs/salary.png" alt="graduate">
+        <img src="safety_health_imgs/salary.png" alt="graduate">
+        <img src="safety_health_imgs/item-1.png" alt="">
+        <img src="safety_health_imgs/item-2.png" alt="">
+        <img src="safety_health_imgs/item-3.png" alt="">
+        <img src="safety_health_imgs/item-4.png" alt="">
+        <h1>CƠ HỘI HỌC BỔNG</h1>
+        <div class="box">
+            <div class="item">
+                Học bổng khuyến khích của trường và ĐHQGHN
+            </div>
+            <div class="item">
+                Học bổng từ các nhà tài: Toshiba, Honda, Mitsubishi...
+            </div>
+            <div class="item">
+                Học bổng hỗ trợ sinh viên thuộc diện gia đình chính sách, dân tộc thiểu số, hộ nghèo...
+            </div>
+            <div class="item">
+                Cơ hội nhận Học bổng từ Hội sức khỏe nơi làm việc không biên giới – Chi nhánh Hoa Kỳ (WHWB)
+            </div>
+        </div>
+        <img src="env_sci_imgs/graduate.png" alt="">
+    </div>
+
+    <div class="footer">
+        <p>FB: <a href="https://www.facebook.com/fes.hus.vnu">https://www.facebook.com/fes.hus.vnu</a></p>
+        <p>Website: <a href="https://tuyensinh.hus.vnu.edu.vn">https://tuyensinh.hus.vnu.edu.vn</a></p>
+        <p>TikTok: <a href="https://www.tiktok.com/@fesforthebest">https://www.tiktok.com/@fesforthebest</a></p>
+    </div>
+
+</div>
+</body>
+
+</html>

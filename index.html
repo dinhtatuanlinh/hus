@@ -1,342 +1,1262 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Chương trình đào tạo - Công nghệ Kỹ thuật Môi trường</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Roboto", sans-serif;
-        background-color: #f4f9ff;
-        line-height: 1.6;
-        color: #333;
-      }
-      header {
-        background: linear-gradient(90deg, #009fe3, #00c2ff);
-        padding: 30px 20px;
-        text-align: center;
-        color: white;
-        border-radius: 0 0 20px 20px;
-      }
-      header h1 {
-        font-size: 28px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      header p {
-        font-size: 18px;
-        font-style: italic;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 0 20px;
-      }
-      .section {
-        background: white;
-        margin: 20px 0;
-        border-radius: 20px;
-        padding: 25px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-      .section h2 {
-        font-size: 22px;
-        color: #007acc;
-        margin-bottom: 15px;
-      }
-      ul {
-        list-style-type: disc;
-        padding-left: 20px;
-      }
-      .grid-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-      }
-      .highlight {
-        color: #f59e0b;
-        font-weight: bold;
-      }
-      .footer {
-        text-align: center;
-        padding: 20px;
-        font-size: 14px;
-        color: #555;
-      }
-      .box {
-        background-color: #e0f3ff;
-        border-left: 5px solid #00a2ff;
-        padding: 15px;
-        margin-top: 10px;
-        border-radius: 10px;
-      }
-
-      .info-grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto auto;
-  gap: 15px;
-  align-items: start;
-}
-
-.info-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.qr-code {
-  grid-row: 1 / span 2; /* span 2 rows vertically */
-  grid-column: 2;
-  padding-left: 10px;
-}
-
-.qr-code img {
-  width: 100px;
-  height: 100px;
-}
-
-.info-icon {
-  background-color: #eccf2d;
-  padding: 8px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border: 2px solid #d1eaff;
-}
-
-.info-icon img {
-  width: 24px;
-  height: 24px;
-}
-      @media (max-width: 768px) {
-        .grid-2 {
-          grid-template-columns: 1fr;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-      }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f4f9ff;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container-d {
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            /* Set fixed width */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .container-d h1 {
+            background-color: #00AEEF;
+            /* Blue background */
+            color: white;
+            /* White text */
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .container-d .head .program .subtitle {
+            font-style: italic;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .container-d .head .program .title .line {
+            font-weight: bold;
+            font-size: 42px;
+            color: #0ea5e9; /* Tailwind sky-500 style */
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-shadow: 1px 1px 0 #005f7f; /* A darker shade for border effect */
+        }
+
+        .container-d .head .program .note {
+            font-size: 20px;
+            color: #888;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+
+        .container-d .head {
+            /*background: linear-gradient(90deg, #009fe3, #00c2ff);*/
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 20px #0d3d61 solid;
+            position: relative;
+        }
+
+        .container-d .head img:nth-child(1) {
+            position: absolute;
+            top: -50px;
+            left: 20px;
+            width: 200px;
+        }
+
+        .container-d .head img:nth-child(2) {
+            position: absolute;
+            bottom: -22px;
+            right: 0;
+            width: 350px;
+        }
+
+        .container-d .head img:nth-child(3) {
+            position: absolute;
+            bottom: 3px;
+            left: 20px;
+            width: 180px;
+        }
+
+        .container-d .head h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .container-d .head p {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        .container-d .wrapper-1 {
+            display: flex;
+            flex-direction: row;
+            align-self: start;
+            gap: 20px;
+        }
+
+
+        .container-d .wrapper-1 .section:first-child {
+            flex: 3;
+            margin: 20px 0 0;
+            border-radius: 20px;
+        }
+
+        .container-d .wrapper-1 .section:first-child h2 {
+            text-align: center;
+            color: #2699FB;
+            background-color: #ddeffd;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-radius: 10px 10px 0 0;
+            line-height: 3;
+        }
+
+        .container-d .wrapper-1 .section:first-child .box {
+            background-color: #f4f9ff;
+            border-left: 5px solid #00a2ff;
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-d .wrapper-1 .section:first-child .info-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .qr-code {
+            grid-row: 1 / span 2;
+            /* span 2 rows vertically */
+            grid-column: 2;
+            padding-left: 10px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .qr-code img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .container-d .wrapper-1 .section:first-child .info-icon {
+            background-color: #eccf2d;
+            padding: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d1eaff;
+        }
+
+        .container-d .wrapper-1 .section:first-child .info-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .container-d .wrapper-1 .section:last-child {
+            flex: 4;
+            margin: 20px 0 0;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .container-d .wrapper-1 .section:last-child h2 {
+            text-align: center;
+            color: #2699FB;
+            background-color: #ddeffd;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-radius: 10px 10px 0 0;
+            line-height: 3;
+        }
+
+        .container-d .wrapper-1 .section:last-child .box {
+            background-color: #f4f9ff;
+            border-left: 5px solid #00a2ff;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            padding: 60px;
+            position: relative;
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-container .credit {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-label {
+            background-color: #F8D442;
+            /* Yellow */
+            color: white;
+            padding: 8px 20px 8px 12px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+        }
+
+
+        .container-d .wrapper-1 .section:last-child .credit-label span {
+            white-space: nowrap;
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-label::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            width: 0;
+            height: 0;
+            border-top: 22px solid transparent;
+            border-bottom: 22px solid transparent;
+            border-left: 20px solid #F8D442;
+        }
+
+        .container-d .wrapper-1 .section:last-child .credit-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #E53935;
+            /* Red */
+        }
+
+        .container-d .wrapper-2 {
+            display: flex;
+            flex-direction: row;
+            align-self: flex-start;
+        }
+
+        .container-d .wrapper-2 .section:first-child {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-self: start;
+            padding: 20px 0 0 0;
+        }
+
+        .container-d .wrapper-2 .section:first-child .box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .container-d .wrapper-2 .section:first-child .box img {
+            width: 150px;
+        }
+
+
+        .container-d .wrapper-2 .section:last-child {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .container-d .wrapper-2 .section:last-child img:first-child {
+            flex: 1;
+            width: 300px;
+        }
+
+        .container-d .wrapper-2 .section:last-child img:last-child {
+            flex: 1;
+            width: 400px;
+        }
+
+        .container-d .wrapper-3 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .container-d .wrapper-3 .section:first-child {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-d .wrapper-3 .section:first-child .box {
+            position: relative;
+            padding: 16px;
+            border-radius: 12px;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .container-d .wrapper-3 .section:first-child .box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            /* Thickness of right border */
+            height: 100%;
+            background: linear-gradient(180deg, #eecc32, #a55c2c);
+            z-index: -1;
+        }
+
+        .container-d .wrapper-3 .section:first-child .box .img-1 {
+            position: absolute;
+            top: -6px;
+            left: 0;
+        }
+
+        .container-d .wrapper-3 .section:first-child .box .img-2 {
+            position: absolute;
+            top: 140px;
+            left: 0;
+        }
+
+        .container-d .wrapper-3 .section:first-child .box .img-3 {
+            position: absolute;
+            top: 235px;
+            left: 0;
+        }
+
+        .container-d .wrapper-3 .section:first-child .box .img-4 {
+            position: absolute;
+            top: 335px;
+            left: 0;
+        }
+
+        .container-d .wrapper-3 .section:first-child .box ul {
+            list-style: none;
+            padding-left: 100px;
+        }
+
+        .container-d .wrapper-3 .section:first-child .box ul hr {
+            border: none;
+            border-top: 2px dashed #999;
+            margin: 20px 0;
+        }
+
+        .container-d .wrapper-3 .section:last-child {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:first-child {
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:first-child > div {
+            flex: 1;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:first-child .header {
+            background-color: #81bc3a;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 4px;
+            position: relative;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:first-child .header::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-style: solid;
+            border-width: 14px 0 14px 20px;
+            border-color: transparent transparent transparent #81bc3a;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:first-child .item {
+            background-color: #e8eeea;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            color: #555;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:first-child .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:first-child img {
+            width: 200px;
+        }
+
+
+        .container-d .wrapper-3 .section:last-child .box:last-child {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child .wrapper-item {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child .wrapper-item .item:last-child {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            margin: 20px 150px;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child .wrapper-item .item {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            margin: 20px;
+            text-align: center;
+            padding: 10px
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child img:nth-child(1) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child img:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 250px;
+            width: 50px;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child img:nth-child(3) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child img:nth-child(4) {
+            position: absolute;
+            top: 110px;
+            right: 140px;
+            width: 50px;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child img:nth-child(5) {
+            position: absolute;
+            width: 50px;
+            top: 50px;
+            left: 0;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child img:nth-child(6) {
+            position: absolute;
+            width: 50px;
+            top: 50px;
+            left: 280px;
+        }
+
+        .container-d .wrapper-3 .section:last-child .box:last-child img:nth-child(7) {
+            position: absolute;
+            width: 50px;
+            bottom: 0;
+            left: 120px;
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
+            color: #f8d254;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background: #0e3e62;
+        }
+
+        .footer p {
+            margin: 0 20px;
+        }
+
+        .footer p a {
+            text-decoration: none;
+            color: #f8d254;
+        }
+
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto auto auto;
+            gap: 15px;
+            align-items: start;
+        }
+
+
+        @media screen and (min-width: 768px) {
+            .container-m {
+                display: none !important;
+            }
+        }
+
+
+        .container-m {
+            display: flex;
+            flex-direction: column;
+            min-width: 375px;
+            /* Set fixed width */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .container-m img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        .container-m h1 {
+            background-color: #00AEEF;
+            /* Blue background */
+            color: white;
+            /* White text */
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .container-m h2 {
+            text-align: center;
+            color: #2699FB;
+            background-color: #ddeffd;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-radius: 10px 10px 0 0;
+            line-height: 3;
+        }
+
+        .container-m .head {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-m .head img:nth-child(1) {
+            width: 100px;
+        }
+
+        .container-m .head img:nth-child(2) {
+            width: 300px;
+        }
+
+        .container-m .head .program {
+            width: 100%;
+            background: rgba(220, 219, 219, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-m .head .program .subtitle {
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .container-m .head .program .title .line {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .container-m .head .program .note {
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .container-m .box {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .container-m .section {
+            margin-bottom: 2rem;
+        }
+
+        /* Info grid */
+        .container-m .info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .container-m .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .container-m .wrapper-1 .section:first-child .info-icon {
+            background-color: #eccf2d;
+            padding: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d1eaff;
+        }
+        .container-m .wrapper-1 .section:first-child .info-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+
+        /* QR Code fixed placement */
+        .container-m .qr-fixed {
+            margin-top: 1rem;
+            align-self: center;
+        }
+
+        /* Credit box */
+        .container-m .credit-container h1 {
+            font-size: 1.2rem;
+        }
+
+        .container-m .credit {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .credit-label {
+            font-weight: bold;
+        }
+
+        .container-m .credit-value {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        /* Custom list */
+        .container-m .custom-bullet-list {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        /* Job images */
+        .container-m .wrapper-3 img[class^="img-"] {
+            margin: 0.5rem 0;
+        }
+
+        /* Scholarship section */
+        .container-m .wrapper-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .container-m .wrapper-item .item {
+            background-color: #e6f2ff;
+            padding: 0.8rem;
+            border-radius: 5px;
+        }
+
+
+        .container-m .program {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .container-m .wrapper-1, .wrapper-2, .wrapper-3 {
+            padding: 0;
+        }
+
+        .container-m .credit {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .container-m .section h1, .section h2 {
+            font-size: 1.3rem;
+        }
+
+        .container-m .box {
+            padding: 1rem;
+        }
+
+        .container-m .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+        }
+        .container-m .wrapper-3 .section:first-child .box {
+            position: relative;
+        }
+        .container-m .wrapper-3 .section:first-child .box img:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+        }
+        .container-m .wrapper-3 .section:first-child .box img:nth-child(2) {
+            position: absolute;
+            top: 180px;
+            left: 0;
+            width: 50px;
+        }
+        .container-m .wrapper-3 .section:first-child .box img:nth-child(3) {
+            position: absolute;
+            top: 280px;
+            left: 0;
+            width: 50px;
+        }
+        .container-m .wrapper-3 .section:first-child .box img:nth-child(4) {
+            position: absolute;
+            top: 380px;
+            left: 0;
+            width: 50px;
+        }
+
+        .container-m .wrapper-3 .box ul {
+            padding-left: 1rem;
+        }
+        .container-m .wrapper-3 .box ul li {
+            padding-left: 20px;
+        }
+        .container-m .footer {
+            display: flex;
+            flex-direction: column;
+        }
+        .container-m .footer a{
+            text-decoration: none;
+            color: #f8d254;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container-d {
+                display: none !important;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <h1>Chương trình đào tạo<br />Công nghệ Kỹ thuật Môi trường</h1>
-      <p>(Environmental Engineering)</p>
-    </header>
+</head>
 
-    <div class="container">
-      <div class="grid-2">
-        <div class="section">
-          <h2>Thông tin chung</h2>
-          <div class="box info-grid">
-            <div class="info-content">
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/document--v1.png"
-                    alt="icon"
-                  />
-                </div>
-                <span>Mã số ngành đào tạo: <strong>7510406</strong></span>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png"
-                    alt="icon"
-                  />
-                </div>
-                <span>Mã tuyển sinh: <strong>QHT115</strong></span>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png"
-                    alt="icon"
-                  />
-                </div>
-                <span>Kiểm định: <strong>AUN-QA năm 2018 & 2024</strong></span>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/diploma.png"
-                    alt="icon"
-                  />
-                </div>
-                <span
-                  >Trình độ đào tạo: <strong>Đại học (Cử nhân)</strong></span
-                >
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/time.png"
-                    alt="icon"
-                  />
-                </div>
-                <span>Thời gian đào tạo: <strong>4 năm</strong></span>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/university.png"
-                    alt="icon"
-                  />
-                </div>
-                <span
-                  >Đơn vị đào tạo:
-                  <strong>Trường ĐH Khoa học Tự nhiên, ĐHQGHN</strong></span
-                >
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/idea.png"
-                    alt="icon"
-                  />
-                </div>
-                <span
-                  >Triết lý giáo dục:
-                  <strong>Học để ứng dụng - Học từ thực tiễn</strong></span
-                >
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://img.icons8.com/ios-filled/50/000000/money.png"
-                    alt="icon"
-                  />
-                </div>
-                <span
-                  >Học phí dự kiến năm học 2025-2026:
-                  <strong>4.000.000đ/tháng</strong></span
-                >
-              </div>
+<body>
+<div class="container-d">
+    <div class="head">
+        <img src="imgs/logo.png" alt="logo">
+        <img src="imgs/banner-1.png" alt="banner1">
+        <img src="imgs/banner-2.png" alt="banner2">
+        <div class="program">
+            <div class="subtitle">Chương trình đào tạo</div>
+            <div class="title">
+                <div class="line">CÔNG NGHỆ KỸ THUẬT</div>
+                <div class="line">MÔI TRƯỜNG</div>
             </div>
-
-            <div class="qr-fixed">
-              <img
-                src="https://api.qrserver.com/v1/create-qr-code/?data=7510406&size=100x100"
-                alt="QR Code"
-              />
-            </div>
-          </div>
+            <div class="note">(Environmental Engineering)</div>
         </div>
-
-        <div class="section">
-          <h2>Mục tiêu đào tạo</h2>
-          <div class="box">
-            <ul>
-              <li>
-                Trang bị cho sinh viên kiến thức nền và công nghệ xử lý, quản lý
-                và tái sử dụng chất thải.
-              </li>
-              <li>
-                Tiếp cận phương pháp giải pháp công nghệ hiện đại và phù hợp
-                điều kiện thực tế tại Việt Nam.
-              </li>
-              <li>Hướng đến phát triển bền vững và kinh tế tuần hoàn.</li>
-              <li>Có kỹ năng nghề nghiệp, làm việc độc lập, sáng tạo.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Chương trình đào tạo</h2>
-          <p>
-            <strong>Tổng số tín chỉ:</strong> <span class="highlight">126</span>
-          </p>
-          <div class="box">
-            <ul>
-              <li>Công nghệ xử lý nước</li>
-              <li>Công nghệ xử lý khí</li>
-              <li>Công nghệ xử lý chất thải rắn</li>
-              <li>Vật liệu môi trường</li>
-              <li>Công nghệ xử lý đất ô nhiễm</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Phương thức tuyển sinh</h2>
-          <div class="box">
-            <ul>
-              <li>Chỉ tiêu: <span class="highlight">80 sinh viên</span></li>
-              <li>Xét tuyển theo đề án của Trường ĐHKHTN</li>
-              <li>Xét kết quả thi tốt nghiệp THPT (A00, A01, B00, D07, C02)</li>
-              <li>Thi đánh giá năng lực của ĐHQGHN</li>
-              <li>Chứng chỉ quốc tế và xét tuyển thẳng</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Cơ hội nghề nghiệp</h2>
-          <div class="box">
-            <ul>
-              <li>
-                Tham gia thực tập tại nhà máy, viện nghiên cứu, công ty kỹ
-                thuật, ngân hàng...
-              </li>
-              <li>
-                Giảng dạy, nghiên cứu tại trường, viện, trung tâm khoa học.
-              </li>
-              <li>
-                Làm tại nhà máy, công ty, tư vấn, quản lý, cơ quan chính phủ
-                hoặc khu công nghiệp.
-              </li>
-              <li>Kinh doanh thiết bị, công nghệ và dịch vụ môi trường.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Cơ hội học bổng</h2>
-          <div class="box">
-            <ul>
-              <li>Học bổng khuyến khích của ĐHQGHN</li>
-              <li>Học bổng tài trợ: BIDV, Honda, Mitsubishi...</li>
-              <li>
-                Học bổng hỗ trợ sinh viên chính sách, dân tộc thiểu số, hộ
-                nghèo...
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        <p>
-          FB: https://www.facebook.com/fes.hus.vnu | Website:
-          https://tuyensinh.hus.vnu.edu.vn | TikTok:
-          https://www.tiktok.com/@fesforthebest
-        </p>
-      </div>
     </div>
-  </body>
+
+    <div class="wrapper-1">
+        <div class="section">
+            <h2>Thông tin chung</h2>
+            <div class="box info-grid">
+                <div class="info-content">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/document--v1.png" alt="icon"/>
+                        </div>
+                        <span>Mã số ngành đào tạo: <strong>7510406</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
+                        </div>
+                        <span>Mã tuyển sinh: <strong>QHT115</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
+                        </div>
+                        <span>Kiểm định: <strong>AUN-QA năm 2018 & 2024</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/diploma.png" alt="icon"/>
+                        </div>
+                        <span>Trình độ đào tạo: <strong>Đại học (Cử nhân)</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/time.png" alt="icon"/>
+                        </div>
+                        <span>Thời gian đào tạo: <strong>4 năm</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/university.png" alt="icon"/>
+                        </div>
+                        <span>Đơn vị đào tạo:
+                                <strong>Trường ĐH Khoa học Tự nhiên, ĐHQGHN</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/idea.png" alt="icon"/>
+                        </div>
+                        <span>Triết lý giáo dục:
+                                <strong>Học để ứng dụng - Học từ thực tiễn</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="icon"/>
+                        </div>
+                        <span>Học phí dự kiến năm học 2025-2026:
+                                <strong>4.000.000đ/tháng</strong></span>
+                    </div>
+                </div>
+
+                <div class="qr-fixed">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=7510406&size=100x100"
+                         alt="QR Code"/>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>Mục tiêu đào tạo</h2>
+            <div class="box">
+                <ul>
+                    <li>
+                        Trang bị cho sinh viên kiến thức nền và công nghệ xử lý, quản lý
+                        và tái sử dụng chất thải.
+                    </li>
+                    <li>
+                        Tiếp cận phương pháp giải pháp công nghệ hiện đại và phù hợp
+                        điều kiện thực tế tại Việt Nam.
+                    </li>
+                    <li>Hướng đến phát triển bền vững và kinh tế tuần hoàn.</li>
+                    <li>Có kỹ năng nghề nghiệp, làm việc độc lập, sáng tạo.</li>
+                </ul>
+            </div>
+            <div class="credit-container">
+                <h1>Chương trình đào tạo</h1>
+                <div class="credit">
+                    <div class="credit-label">
+                        <span>Tổng số tín chỉ</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="credit-value">126</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="wrapper-2">
+        <div class="section">
+            <h1>Phương thức tuyển sinh</h1>
+            <div class="box">
+                <img src="imgs/chi-tieu-1.png" alt="chitieu">
+                <ul class="custom-bullet-list">
+                    <li>Xét tuyển thẳng theo quy định của Quy chế tuyển sinh (Điều 8)</li>
+                    <li>Xét tuyển thẳng theo Đề án của Trường ĐHKHTN</li>
+                    <li>Xét kết quả thi tốt nghiệp THPT (A00, A01, B00, D07, C02)</li>
+                    <li>Thi đánh giá năng lực của ĐHQGHN</li>
+                    <li>Chỉ sử dụng chứng chỉ quốc tế để xét tuyển</li>
+                    <li>Kết hợp kết quả thi tốt nghiệp THPT với chứng chỉ quốc tế để xét tuyển</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+
+            <img src="imgs/studying.png" alt="">
+            <img src="imgs/plan.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper-3">
+
+        <div class="section">
+            <h1>Cơ hội nghề nghiệp</h1>
+            <div class="box">
+                <img class="img-1" src="imgs/job-1.png" alt="">
+                <img class="img-2" src="imgs/job-2.png" alt="">
+                <img class="img-3" src="imgs/job-3.png" alt="">
+                <img class="img-4" src="imgs/job-4.png" alt="">
+                <ul>
+                    <li>
+                        <hr>
+                        Trong thời gian đào tạo, sinh viên được tham gia các đợt thực tập tại các nhà máy, xí
+                        nghiệp, công ty về công nghệ kỹ thuật xử lý môi trường, các bộ, sở, ban ngành, các viện khoa
+                        học và trung tâm nghiên cứu, phòng thí nghiệm trong và ngoài nước...
+                    </li>
+                    <li>
+                        <hr>
+                        Giảng dạy, nghiên cứu, quản lý tại các Trường Đại học và Cao đẳng, các Viện và Trung tâm
+                        nghiên cứu khoa học
+                    </li>
+                    <li>
+                        <hr>
+                        Làm việc tại các nhà máy xí nghiệp, công ty, doanh nghiệp, đơn vị tư vấn, tập đoàn, công
+                        nghệ cao và khu công nghiệp
+                    </li>
+                    <li>
+                        <hr>
+                        Làm việc tại cơ sở sản xuất kinh doanh có liên quan đến lĩnh vực công nghệ, kỹ thuật môi
+                        trường, khai thác tài nguyên
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="box">
+                <div>
+                    <div class="header">Điểm chuẩn các năm gần đây</div>
+                    <div class="item">
+                        <span>2022</span>
+                        <span>20 điểm</span>
+                    </div>
+                    <div class="item">
+                        <span>2023</span>
+                        <span>20 điểm</span>
+                    </div>
+                    <div class="item">
+                        <span>2024</span>
+                        <span>21 điểm</span>
+                    </div>
+                </div>
+                <img src="imgs/book.png" alt="book">
+            </div>
+            <h1>Cơ hội học bổng</h1>
+            <div class="box">
+                <img src="imgs/graduate.png" alt="graduate">
+                <img src="imgs/salary.png" alt="graduate">
+                <img src="imgs/salary.png" alt="graduate">
+                <img src="imgs/salary.png" alt="graduate">
+                <img src="imgs/item-1.png" alt="">
+                <img src="imgs/item-2.png" alt="">
+                <img src="imgs/item-3.png" alt="">
+                <div class="wrapper-item">
+                    <div class="item">
+                        Học bổng khuyến khích của ĐHQGHN
+                    </div>
+                    <div class="item">
+                        Học bổng tài trợ: BIDV, Honda, Mitsubishi...
+                    </div>
+                    <div class="item">
+                        Học bổng hỗ trợ sinh viên chính sách, dân tộc thiểu số, hộ
+                        nghèo...
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>FB: <a href="https://www.facebook.com/fes.hus.vnu">https://www.facebook.com/fes.hus.vnu</a></p>
+        <p>Website: <a href="https://tuyensinh.hus.vnu.edu.vn">https://tuyensinh.hus.vnu.edu.vn</a></p>
+        <p>TikTok: <a href="https://www.tiktok.com/@fesforthebest">https://www.tiktok.com/@fesforthebest</a></p>
+    </div>
+
+</div>
+<div class="container-m">
+    <div class="head">
+        <img src="imgs/logo.png" alt="logo">
+        <img src="imgs/banner-1.png" alt="banner1">
+        <!--        <img src="./banner-2.png" alt="banner2">-->
+        <div class="program">
+            <div class="subtitle">Chương trình đào tạo</div>
+            <div class="title">
+                <div class="line">CÔNG NGHỆ KỸ THUẬT</div>
+                <div class="line">MÔI TRƯỜNG</div>
+            </div>
+            <div class="note">(Environmental Engineering)</div>
+        </div>
+    </div>
+
+    <div class="wrapper-1">
+        <div class="section">
+            <h2>Thông tin chung</h2>
+            <div class="box info-grid">
+                <div class="info-content">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/document--v1.png" alt="icon"/>
+                        </div>
+                        <span>Mã số ngành đào tạo: <strong>7510406</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
+                        </div>
+                        <span>Mã tuyển sinh: <strong>QHT115</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
+                        </div>
+                        <span>Kiểm định: <strong>AUN-QA năm 2018 & 2024</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/diploma.png" alt="icon"/>
+                        </div>
+                        <span>Trình độ đào tạo: <strong>Đại học (Cử nhân)</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/time.png" alt="icon"/>
+                        </div>
+                        <span>Thời gian đào tạo: <strong>4 năm</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/university.png" alt="icon"/>
+                        </div>
+                        <span>Đơn vị đào tạo:
+                                <strong>Trường ĐH Khoa học Tự nhiên, ĐHQGHN</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/idea.png" alt="icon"/>
+                        </div>
+                        <span>Triết lý giáo dục:
+                                <strong>Học để ứng dụng - Học từ thực tiễn</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="icon"/>
+                        </div>
+                        <span>Học phí dự kiến năm học 2025-2026:
+                                <strong>4.000.000đ/tháng</strong></span>
+                    </div>
+                </div>
+
+                <div class="qr-fixed">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=7510406&size=100x100"
+                         alt="QR Code"/>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>Mục tiêu đào tạo</h2>
+            <div class="box">
+                <ul>
+                    <li>
+                        Trang bị cho sinh viên kiến thức nền và công nghệ xử lý, quản lý
+                        và tái sử dụng chất thải.
+                    </li>
+                    <li>
+                        Tiếp cận phương pháp giải pháp công nghệ hiện đại và phù hợp
+                        điều kiện thực tế tại Việt Nam.
+                    </li>
+                    <li>Hướng đến phát triển bền vững và kinh tế tuần hoàn.</li>
+                    <li>Có kỹ năng nghề nghiệp, làm việc độc lập, sáng tạo.</li>
+                </ul>
+            </div>
+            <div class="credit-container">
+                <h1>Chương trình đào tạo</h1>
+                <div class="credit">
+                    <div class="credit-label">
+                        <span>Tổng số tín chỉ</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="credit-value">126</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="wrapper-2">
+        <div class="section">
+            <h1>Phương thức tuyển sinh</h1>
+            <div class="box">
+                <img src="imgs/chi-tieu-1.png" alt="chitieu">
+                <ul class="custom-bullet-list">
+                    <li>Xét tuyển thẳng theo quy định của Quy chế tuyển sinh (Điều 8)</li>
+                    <li>Xét tuyển thẳng theo Đề án của Trường ĐHKHTN</li>
+                    <li>Xét kết quả thi tốt nghiệp THPT (A00, A01, B00, D07, C02)</li>
+                    <li>Thi đánh giá năng lực của ĐHQGHN</li>
+                    <li>Chỉ sử dụng chứng chỉ quốc tế để xét tuyển</li>
+                    <li>Kết hợp kết quả thi tốt nghiệp THPT với chứng chỉ quốc tế để xét tuyển</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+
+            <img src="imgs/studying.png" alt="">
+            <img src="imgs/plan.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper-3">
+
+        <div class="section">
+            <h1>Cơ hội nghề nghiệp</h1>
+            <div class="box">
+                <img class="img-1" src="imgs/job-1.png" alt="">
+                <img class="img-2" src="imgs/job-2.png" alt="">
+                <img class="img-3" src="imgs/job-3.png" alt="">
+                <img class="img-4" src="imgs/job-4.png" alt="">
+                <ul>
+                    <li>
+                        <hr>
+                        Trong thời gian đào tạo, sinh viên được tham gia các đợt thực tập tại các nhà máy, xí
+                        nghiệp, công ty về công nghệ kỹ thuật xử lý môi trường, các bộ, sở, ban ngành, các viện khoa
+                        học và trung tâm nghiên cứu, phòng thí nghiệm trong và ngoài nước...
+                    </li>
+                    <li>
+                        <hr>
+                        Giảng dạy, nghiên cứu, quản lý tại các Trường Đại học và Cao đẳng, các Viện và Trung tâm
+                        nghiên cứu khoa học
+                    </li>
+                    <li>
+                        <hr>
+                        Làm việc tại các nhà máy xí nghiệp, công ty, doanh nghiệp, đơn vị tư vấn, tập đoàn, công
+                        nghệ cao và khu công nghiệp
+                    </li>
+                    <li>
+                        <hr>
+                        Làm việc tại cơ sở sản xuất kinh doanh có liên quan đến lĩnh vực công nghệ, kỹ thuật môi
+                        trường, khai thác tài nguyên
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="box">
+                <div>
+                    <div class="header">Điểm chuẩn các năm gần đây</div>
+                    <div class="item">
+                        <span>2022</span>
+                        <span>20 điểm</span>
+                    </div>
+                    <div class="item">
+                        <span>2023</span>
+                        <span>20 điểm</span>
+                    </div>
+                    <div class="item">
+                        <span>2024</span>
+                        <span>21 điểm</span>
+                    </div>
+                </div>
+            </div>
+            <h1>Cơ hội học bổng</h1>
+            <div class="box">
+                <img src="imgs/graduate.png" alt="graduate">
+                <div class="wrapper-item">
+                    <div class="item">
+                        Học bổng khuyến khích của ĐHQGHN
+                    </div>
+                    <div class="item">
+                        Học bổng tài trợ: BIDV, Honda, Mitsubishi...
+                    </div>
+                    <div class="item">
+                        Học bổng hỗ trợ sinh viên chính sách, dân tộc thiểu số, hộ
+                        nghèo...
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>FB: <a href="https://www.facebook.com/fes.hus.vnu">https://www.facebook.com/fes.hus.vnu</a></p>
+        <p>Website: <a href="https://tuyensinh.hus.vnu.edu.vn">https://tuyensinh.hus.vnu.edu.vn</a></p>
+        <p>TikTok: <a href="https://www.tiktok.com/@fesforthebest">https://www.tiktok.com/@fesforthebest</a></p>
+    </div>
+
+</div>
+</body>
+
 </html>
