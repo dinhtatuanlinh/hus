@@ -28,14 +28,16 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+
         .container-d .head {
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border-bottom: 20px #abbb44 solid;
+            border-bottom: 20px #ec9149 solid;
         }
+
         .container-d .head img:nth-child(1) {
             position: absolute;
             top: -20px;
@@ -43,28 +45,32 @@
             z-index: -1;
             width: 150px;
         }
+
         .container-d .head img:nth-child(2) {
             position: absolute;
             bottom: 0;
             left: 0;
             z-index: -1;
-            width: 250px;
+            width: 150px;
         }
+
         .container-d .head img:nth-child(3) {
             position: absolute;
             bottom: 0;
-            right: 0;
-            width: 300px;
+            left: 127px;
+            width: 150px;
             z-index: -1;
         }
+
         .container-d .head img:nth-child(4) {
             position: absolute;
-            bottom: 0;
-            left: 45px;
+            bottom: -110px;
+            right: 0;
             z-index: -3;
         }
+
         .container-d .head .program {
-            padding: 40px 20px;
+            padding: 20px 20px;
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -74,6 +80,7 @@
             font-size: 36px;
             font-weight: bold;
             color: #333;
+            padding-left: 20px;
         }
 
         .container-d .head .title .line {
@@ -88,6 +95,7 @@
         .container-d .head .note {
             font-size: 20px;
             color: #555;
+            padding-left: 20px;
         }
 
         .container-d h1 {
@@ -222,6 +230,7 @@
             padding: 60px;
             position: relative;
         }
+
         .container-d .wrapper-1 .section:last-child .credit-container h1 {
             margin-top: 50px;
         }
@@ -375,6 +384,7 @@
             padding: 60px;
             position: relative;
         }
+
         .container-d .wrapper-2 .section:last-child .atom {
             position: absolute;
             top: 0;
@@ -485,12 +495,14 @@
             border-radius: 50%;
             border: 2px solid white;
         }
+
         .container-d .wrapper-2 .section:last-child .box {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
         }
+
         .container-d .wrapper-2 .section:last-child .box img {
             width: 150px;
             height: 150px;
@@ -508,7 +520,7 @@
             margin-bottom: 20px;
         }
 
-        .container-d .wrapper-2 .section:last-child .box .wrapper-score  .section-title::after {
+        .container-d .wrapper-2 .section:last-child .box .wrapper-score .section-title::after {
             content: "";
             position: absolute;
             right: -20px;
@@ -564,11 +576,13 @@
             align-items: center;
             position: relative;
         }
+
         .container-d .wrapper-3 h1 {
             position: absolute;
             top: 0;
             left: 0;
         }
+
         .container-d .wrapper-3 .box {
             display: flex;
             flex-direction: row;
@@ -577,6 +591,7 @@
             margin: 30px 200px;
 
         }
+
         .container-d .wrapper-3 .box .item {
             flex: 1;
             margin: 10px;
@@ -584,47 +599,55 @@
             border-radius: 5px;
             padding: 20px;
         }
+
         .container-d .wrapper-3 img:nth-child(3) {
             position: absolute;
             bottom: 0;
             right: 0;
         }
+
         .container-d .wrapper-3 img:nth-child(4) {
             position: absolute;
             bottom: 50px;
             left: 180px;
             width: 50px;
         }
+
         .container-d .wrapper-3 img:nth-child(5) {
             position: absolute;
             bottom: 40px;
             left: 440px;
             width: 50px;
         }
+
         .container-d .wrapper-3 img:nth-child(6) {
             position: absolute;
             bottom: 20px;
             right: 415px;
             width: 50px;
         }
+
         .container-d .wrapper-3 img:nth-child(7) {
             position: absolute;
             top: 30px;
             left: 410px;
             width: 50px;
         }
+
         .container-d .wrapper-3 img:nth-child(8) {
             position: absolute;
             top: 30px;
             left: 650px;
             width: 50px;
         }
+
         .container-d .wrapper-3 img:nth-child(9) {
             position: absolute;
             top: 30px;
             right: 180px;
             width: 50px;
         }
+
         .footer {
             text-align: center;
             padding: 5px;
@@ -644,6 +667,7 @@
             text-decoration: none;
             color: #f8d254;
         }
+
         @media screen and (min-width: 768px) {
             .container-m {
                 display: none !important;
@@ -658,6 +682,7 @@
             flex-direction: column;
             gap: 24px;
         }
+
         .container-m h1 {
             background-color: #ec9149;
             /* Blue background */
@@ -687,18 +712,20 @@
             width: 80px;
             top: -23px;
         }
+
         .container-m .head img:nth-child(2) {
             position: absolute;
             width: 100px;
-            z-index: 2;
-            bottom: 90px;
+            z-index: 1;
+            bottom: 0;
             left: 0;
         }
+
         .container-m .head img:nth-child(3) {
             position: absolute;
             z-index: 1;
             width: 100px;
-            bottom: 90px;
+            bottom: 0;
             right: 0;
         }
 
@@ -709,6 +736,7 @@
             bottom: 100px;
             left: 25px;
         }
+
         .container-m .wrapper-1 .section:first-child h2 {
             text-align: center;
             color: #fff;
@@ -718,6 +746,7 @@
             border-radius: 10px 10px 0 0;
             line-height: 3;
         }
+
         .container-m .wrapper-1 .section:last-child h2 {
             text-align: center;
             color: #ec9149;
@@ -729,14 +758,15 @@
         }
 
         .container-m .head .program {
-            margin-top: 100px;
+            margin-top: 20px;
+            z-index: 2;
         }
 
         .container-m .head .title .line {
             font-size: 24px;
             font-weight: bold;
             color: #4fc3f7;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
         }
 
         .container-m .head .subtitle {
@@ -749,6 +779,7 @@
             font-size: 14px;
             color: #666;
         }
+
         .container-m .info-grid {
             display: flex;
             position: relative;
@@ -768,7 +799,7 @@
             background-color: #fff;
             padding: 16px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
         .container-m .wrapper-2 .section:nth-child(1) .box1 {
@@ -785,6 +816,7 @@
         .container-m .wrapper-2 .section:nth-child(1) .box {
             position: relative;
         }
+
         .container-m .wrapper-2 .section:nth-child(1) .box img:nth-child(1) {
             position: absolute;
             width: 50px;
@@ -810,6 +842,7 @@
             margin-top: 10px;
             margin-left: 80px;
         }
+
         .container-m .wrapper-2 .section:last-child {
             flex: 1;
             display: flex;
@@ -820,6 +853,7 @@
             height: 100%;
             position: relative;
         }
+
         .container-m .wrapper-2 .section:last-child .credit {
             display: flex;
             align-items: center;
@@ -865,17 +899,20 @@
             color: #E53935;
             /* Red */
         }
+
         .container-m .wrapper-2 .section:last-child .atom {
             position: absolute;
             top: 50px;
             right: 0;
             width: 80px;
         }
+
         .container-m .wrapper-2 .section:last-child .title {
             position: absolute;
             top: 140px;
             left: 0;
         }
+
         .container-m .wrapper-2 .section:last-child .section-title {
             background-color: #4CAF50;
             color: white;
@@ -899,10 +936,12 @@
             border-bottom: 32px solid transparent;
             border-left: 20px solid #4CAF50;
         }
+
         .container-m .wrapper-3 img {
             width: 200px;
             margin: 0 auto;
         }
+
         .container-m .info-grid {
             display: flex;
             flex-direction: column;
@@ -918,7 +957,7 @@
             background: #eef7ff;
             padding: 12px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .info-item img {
@@ -990,7 +1029,7 @@
             background-color: #ffffff;
             padding: 16px;
             border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
             text-align: left;
         }
 
@@ -1021,6 +1060,7 @@
             border: 2px solid #4caf50;
             border-radius: 50%;
         }
+
         @media screen and (max-width: 767px) {
 
 
@@ -1034,6 +1074,7 @@
                 margin: 5px 0;
             }
         }
+
         @media screen and (max-width: 768px) {
             .container-d {
                 display: none !important;
@@ -1047,17 +1088,249 @@
 <div class="container-d">
     <div class="head">
         <img src="env_sci_imgs/logo.png" alt="logo">
-        <img src="env_sci_imgs/banner-1.png" alt="banner1">
-        <img src="env_sci_imgs/banner-2.png" alt="banner2">
-        <img src="env_sci_imgs/tree.png" alt="">
+        <img src="./banner-1.png" alt="banner1">
+        <img src="./banner-2.png" alt="banner2">
+        <img src="./banner-3.png" alt="">
         <div class="program">
             <div class="subtitle">Chương trình đào tạo</div>
             <div class="title">
-                <div class="line">KHOA HỌC MÔI TRƯỜNG</div>
+                <div class="line">KHOA HỌC VÀ</div>
+                <div class="line">CÔNG NGHỆ THỰC PHẨM</div>
             </div>
-            <div class="note">(Environmental Sciences)</div>
+            <div class="note">(Food Science and Technology)</div>
         </div>
     </div>
+    <div class="wrapper-1">
+        <div class="section">
+            <h2>Thông tin chung</h2>
+            <div class="box info-grid">
+                <div class="info-content">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/document--v1.png" alt="icon"/>
+                        </div>
+                        <span>Mã số ngành đào tạo: <strong>7510406</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
+                        </div>
+                        <span>Mã tuyển sinh: <strong>QHT96</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
+                        </div>
+                        <span>Kiểm định: <strong>AUN-QA năm 2015; Bộ GDĐT 2023</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/diploma.png" alt="icon"/>
+                        </div>
+                        <span>Trình độ đào tạo: <strong>Đại học (Cử nhân)</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/time.png" alt="icon"/>
+                        </div>
+                        <span>Thời gian đào tạo: <strong>4 năm</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/university.png" alt="icon"/>
+                        </div>
+                        <span>Đơn vị đào tạo:
+                                <strong>Trường ĐH Khoa học Tự nhiên, ĐHQGHN</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/idea.png" alt="icon"/>
+                        </div>
+                        <span>Triết lý giáo dục:
+                                <strong>Học để ứng dụng - Học từ thực tiễn</strong></span>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="icon"/>
+                        </div>
+                        <span>Học phí dự kiến năm học 2025-2026:
+                                <strong>Học phí 4.000.000 đ/tháng</strong></span>
+                    </div>
+                </div>
+
+                <!--                <div class="qr-fixed">-->
+                <!--                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=7510406&size=100x100"-->
+                <!--                         alt="QR Code"/>-->
+                <!--                </div>-->
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>Mục tiêu đào tạo</h2>
+            <div class="box">
+                <ul>
+                    <li>Trang bị cho sinh viên những kiến thức chuyên môn toàn diện của ngành Khoa học và công nghệ thực
+                        phẩm để áp dụng cho công tác quản lý, kiểm định chất lượng, công nghệ chế biến, bảo quản cũng
+                        như tiêu dùng thực phẩm, dinh dưỡng thực phẩm và văn hóa ẩm thực của con người
+                    </li>
+                    <li>Có kỹ năng thực hành, phân tích và đánh giá, chế biến và bảo quản thực phẩm, vận dụng kiến thức
+                        vào thực tế, phát triển bản thân.
+                    </li>
+                    <li>Nắm vững nguyên lý, quy luật tự nhiên, kiến thức cơ bản về khoa học xã hội, chính trị và pháp
+                        luật để vận dụng trong lĩnh vực Khoa học và Công nghệ thực phẩm
+                    </li>
+                    <li>Có khả năng làm việc độc lập và làm việc nhóm, tự chủ, sáng tạo, trách nhiệm và đạo đức nghề
+                        nghiệp, sẵn sàng phục vụ cộng đồng
+                    </li>
+                </ul>
+            </div>
+            <div class="credit-container">
+                <h1>Chương trình đào tạo</h1>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrapper-2">
+        <div class="section">
+            <h1>Phương thức tuyển sinh</h1>
+            <div class="box1">
+                <img src="env_sci_imgs/chi-tieu.png" alt="chitieu">
+                <ul class="custom-bullet-list">
+                    <li>Xét tuyển thẳng theo quy định của Quy chế tuyển sinh (Điều 8)</li>
+                    <li>Xét tuyển thẳng theo Đề án của Trường ĐHKHTN</li>
+                    <li>Xét kết quả thi tốt nghiệp THPT (A00, A01, B00, D07, C02)</li>
+                    <li>Thi đánh giá năng lực của ĐHQGHN</li>
+                    <li>Chỉ sử dụng chứng chỉ quốc tế để xét tuyển</li>
+                    <li>Kết hợp kết quả thi tốt nghiệp THPT với chứng chỉ quốc tế để xét tuyển</li>
+                </ul>
+            </div>
+
+            <h1>Cơ hội nghề nghiệp</h1>
+            <div class="box">
+                <img src="./job-1.png" alt="">
+                <img src="./job-2.png" alt="">
+                <img src="./job-3.png" alt="">
+                <ul>
+                    <li>
+                        <hr>
+                        Trong thời gian đào tạo sinh viên được đi thực tập (có trả lương) tại các công ty lớn về thực
+                        phẩm như Doveco, CP Group, Nutifood, Number one… và có cơ hội được nhận vào làm việc sau khi tốt
+                        nghiệp.
+                    </li>
+                    <li>
+                        <hr>
+                        Làm việc tại các cơ quan quản lí nhà nước, các đơn vị kiểm nghiệm, kiểm tra, giám sát đánh giá
+                        an toàn thực phẩm, tư vấn quản lý và dinh dưỡng thực phẩm
+                    </li>
+                    <li>
+                        <hr>
+                        Công tác tại các trường đại học, viện nghiên cứu, các doanh nghiệp về lĩnh vực khoa học và công
+                        nghệ thực phẩm
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+
+            <div class="credit">
+                <div class="credit-label">
+                    <span>Tổng số tín chỉ</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="credit-value">131</div>
+            </div>
+            <img class="atom" src="./book.png" alt="">
+
+            <div class="title">
+                <div class="section-title">Các hướng đào tạo chuyên sâu</div>
+            </div>
+
+
+            <div class="list-container">
+                <div class="list-item">Công nghệ chế biến thực phẩm</div>
+                <div class="list-item">Công nghệ bảo quản thực phẩm</div>
+                <div class="list-item">Kiểm nghiệm, kiểm soát, quản lý chất lượng và môi trường trong thực phẩm</div>
+                <div class="list-item">Dinh dưỡng thực phẩm</div>
+                <div class="list-item">Văn hóa ẩm thực và dịch vụ lữ hành</div>
+            </div>
+            <div class="box">
+                <img src="./studying.png" alt="">
+                <div class="wrapper-score">
+                    <div class="section-title">Điểm chuẩn các năm gần đây</div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="year">2022</div>
+                            <div class="score">24.7 điểm</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2023</div>
+                            <div class="score">24.35 điểm</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2024</div>
+                            <div class="score">24.6 điểm</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-3">
+        <h1>CƠ HỘI HỌC BỔNG</h1>
+        <div class="box">
+            <div class="item">
+                Học bổng khuyến khích của trường và ĐHQGHN
+            </div>
+            <div class="item">
+                Học bổng từ các nhà tài: BIDV, Yakult, K-T...
+            </div>
+            <div class="item">
+                Học bổng hỗ trợ sinh viên thuộc diện gia đình chính sách, dân tộc thiểu số, hộ nghèo...
+            </div>
+        </div>
+        <img src="env_sci_imgs/graduate.png" alt="">
+        <img src="env_sci_imgs/item-1.png" alt="">
+        <img src="env_sci_imgs/item-2.png" alt="">
+        <img src="env_sci_imgs/item-3.png" alt="">
+        <img src="env_sci_imgs/salary.png" alt="">
+        <img src="env_sci_imgs/salary.png" alt="">
+        <img src="env_sci_imgs/salary.png" alt="">
+    </div>
+    <div class="footer">
+        <p>FB: <a href="https://www.facebook.com/fes.hus.vnu">https://www.facebook.com/fes.hus.vnu</a></p>
+        <p>Website: <a href="https://tuyensinh.hus.vnu.edu.vn">https://tuyensinh.hus.vnu.edu.vn</a></p>
+        <p>TikTok: <a href="https://www.tiktok.com/@fesforthebest">https://www.tiktok.com/@fesforthebest</a></p>
+    </div>
+</div>
+
+<div class="container-m">
+    <div class="head">
+        <img src="env_sci_imgs/logo.png" alt="logo">
+        <img src="./banner-1.png" alt="banner1">
+        <img src="./banner-2.png" alt="banner2">
+
+        <div class="program">
+            <div class="subtitle">Chương trình đào tạo</div>
+            <div class="title">
+                <div class="line">KHOA HỌC VÀ</div>
+                <div class="line">CÔNG NGHỆ THỰC PHẨM</div>
+            </div>
+            <div class="note">(Food Science and Technology)</div>
+        </div>
+    </div>
+
     <div class="wrapper-1">
         <div class="section">
             <h2>Thông tin chung</h2>
@@ -1135,233 +1408,18 @@
             <h2>Mục tiêu đào tạo</h2>
             <div class="box">
                 <ul>
-                    <li>Trang bị cho sinh viên những kiến thức chuyên môn toàn diện của ngành Khoa học và công nghệ thực phẩm để áp dụng cho công tác quản lý, kiểm định chất lượng, công nghệ chế biến, bảo quản cũng như tiêu dùng thực phẩm, dinh dưỡng thực phẩm và văn hóa ẩm thực của con người
+                    <li>Trang bị cho sinh viên những kiến thức chuyên môn toàn diện của ngành Khoa học và công nghệ thực
+                        phẩm để áp dụng cho công tác quản lý, kiểm định chất lượng, công nghệ chế biến, bảo quản cũng
+                        như tiêu dùng thực phẩm, dinh dưỡng thực phẩm và văn hóa ẩm thực của con người
                     </li>
-                    <li>Có kỹ năng thực hành, phân tích và đánh giá, chế biến và bảo quản thực phẩm, vận dụng kiến thức vào thực tế, phát triển bản thân.
+                    <li>Có kỹ năng thực hành, phân tích và đánh giá, chế biến và bảo quản thực phẩm, vận dụng kiến thức
+                        vào thực tế, phát triển bản thân.
                     </li>
-                    <li>Nắm vững nguyên lý, quy luật tự nhiên, kiến thức cơ bản về khoa học xã hội, chính trị và pháp luật để vận dụng trong lĩnh vực Khoa học và Công nghệ thực phẩm
+                    <li>Nắm vững nguyên lý, quy luật tự nhiên, kiến thức cơ bản về khoa học xã hội, chính trị và pháp
+                        luật để vận dụng trong lĩnh vực Khoa học và Công nghệ thực phẩm
                     </li>
-                    <li>Có khả năng làm việc độc lập và làm việc nhóm, tự chủ, sáng tạo, trách nhiệm và đạo đức nghề nghiệp, sẵn sàng phục vụ cộng đồng
-                    </li>
-                </ul>
-            </div>
-            <div class="credit-container">
-                <h1>Chương trình đào tạo</h1>
-
-            </div>
-
-        </div>
-    </div>
-    <div class="wrapper-2">
-        <div class="section">
-            <h1>Phương thức tuyển sinh</h1>
-            <div class="box1">
-                <img src="env_sci_imgs/chi-tieu.png" alt="chitieu">
-                <ul class="custom-bullet-list">
-                    <li>Xét tuyển thẳng theo quy định của Quy chế tuyển sinh (Điều 8)</li>
-                    <li>Xét tuyển thẳng theo Đề án của Trường ĐHKHTN</li>
-                    <li>Xét kết quả thi tốt nghiệp THPT (A00, A01, B00, D07, C02)</li>
-                    <li>Thi đánh giá năng lực của ĐHQGHN</li>
-                    <li>Chỉ sử dụng chứng chỉ quốc tế để xét tuyển</li>
-                    <li>Kết hợp kết quả thi tốt nghiệp THPT với chứng chỉ quốc tế để xét tuyển</li>
-                </ul>
-            </div>
-
-            <h1>Cơ hội nghề nghiệp</h1>
-            <div class="box">
-                <img src="./job-1.png" alt="">
-                <img src="./job-2.png" alt="">
-                <img src="./job-3.png" alt="">
-                <ul>
-                    <li>
-                        <hr>
-                        Trong thời gian đào tạo sinh viên được đi thực tập (có trả lương) tại các công ty lớn về thực phẩm như Doveco, CP Group, Nutifood, Number one… và có cơ hội được nhận vào làm việc sau khi tốt nghiệp.
-                    </li>
-                    <li>
-                        <hr>
-                        Làm việc tại các cơ quan quản lí nhà nước, các đơn vị kiểm nghiệm, kiểm tra, giám sát đánh giá an toàn thực phẩm, tư vấn quản lý và dinh dưỡng thực phẩm
-                    </li>
-                    <li>
-                        <hr>
-                        Công tác tại các trường đại học, viện nghiên cứu, các doanh nghiệp về lĩnh vực khoa học và công nghệ thực phẩm
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-        <div class="section">
-
-            <div class="credit">
-                <div class="credit-label">
-                    <span>Tổng số tín chỉ</span>
-                    <div class="arrow"></div>
-                </div>
-                <div class="credit-value">131</div>
-            </div>
-            <img class="atom" src="env_sci_imgs/atom.png" alt="">
-
-            <div class="title">
-                <div class="section-title">Các hướng đào tạo chuyên sâu</div>
-            </div>
-
-
-            <div class="list-container">
-                <div class="list-item">Công nghệ chế biến thực phẩm</div>
-                <div class="list-item">Công nghệ bảo quản thực phẩm</div>
-                <div class="list-item">Kiểm nghiệm, kiểm soát, quản lý chất lượng và môi trường trong thực phẩm</div>
-                <div class="list-item">Dinh dưỡng thực phẩm</div>
-                <div class="list-item">Văn hóa ẩm thực và dịch vụ lữ hành</div>
-            </div>
-            <div class="box">
-                <img src="env_sci_imgs/girl_books.png" alt="">
-                <div class="wrapper-score">
-                    <div class="section-title">Điểm chuẩn các năm gần đây</div>
-
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="year">2022</div>
-                            <div class="score">24.7 điểm</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="year">2023</div>
-                            <div class="score">24.35 điểm</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="year">2024</div>
-                            <div class="score">24.6 điểm</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="wrapper-3">
-        <h1>CƠ HỘI HỌC BỔNG</h1>
-        <div class="box">
-            <div class="item">
-                Học bổng khuyến khích của trường và ĐHQGHN
-            </div>
-            <div class="item">
-                Học bổng từ các nhà tài: Toshiba, Honda, Mitsubishi...
-            </div>
-            <div class="item">
-                Học bổng hỗ trợ sinh viên thuộc diện gia đình chính sách, dân tộc thiểu số, hộ nghèo...
-            </div>
-        </div>
-        <img src="env_sci_imgs/graduate.png" alt="">
-        <img src="env_sci_imgs/item-1.png" alt="">
-        <img src="env_sci_imgs/item-2.png" alt="">
-        <img src="env_sci_imgs/item-3.png" alt="">
-        <img src="env_sci_imgs/salary.png" alt="">
-        <img src="env_sci_imgs/salary.png" alt="">
-        <img src="env_sci_imgs/salary.png" alt="">
-    </div>
-    <div class="footer">
-        <p>FB: <a href="https://www.facebook.com/fes.hus.vnu">https://www.facebook.com/fes.hus.vnu</a></p>
-        <p>Website: <a href="https://tuyensinh.hus.vnu.edu.vn">https://tuyensinh.hus.vnu.edu.vn</a></p>
-        <p>TikTok: <a href="https://www.tiktok.com/@fesforthebest">https://www.tiktok.com/@fesforthebest</a></p>
-    </div>
-</div>
-
-<div class="container-m">
-    <div class="head">
-        <img src="env_sci_imgs/logo.png" alt="logo">
-        <img src="env_sci_imgs/banner-1.png" alt="banner1">
-        <img src="env_sci_imgs/banner-2.png" alt="banner2">
-        <img src="env_sci_imgs/tree.png" alt="">
-        <div class="program">
-            <div class="subtitle">Chương trình đào tạo</div>
-            <div class="title">
-                <div class="line">KHOA HỌC MÔI TRƯỜNG</div>
-            </div>
-            <div class="note">(Environmental Sciences)</div>
-        </div>
-    </div>
-    <div class="wrapper-1">
-        <div class="section">
-            <h2>Thông tin chung</h2>
-            <div class="box info-grid">
-                <div class="info-content">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/document--v1.png" alt="icon"/>
-                        </div>
-                        <span>Mã số ngành đào tạo: <strong>7440301</strong></span>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
-                        </div>
-                        <span>Mã tuyển sinh: <strong>QHT13</strong></span>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="icon"/>
-                        </div>
-                        <span>Kiểm định: <strong>AUN-QA năm 2015; Bộ GDĐT 2023</strong></span>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/diploma.png" alt="icon"/>
-                        </div>
-                        <span>Trình độ đào tạo: <strong>Đại học (Cử nhân)</strong></span>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/time.png" alt="icon"/>
-                        </div>
-                        <span>Thời gian đào tạo: <strong>4 năm</strong></span>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/university.png" alt="icon"/>
-                        </div>
-                        <span>Đơn vị đào tạo:
-                                <strong>Trường ĐH Khoa học Tự nhiên, ĐHQGHN</strong></span>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/idea.png" alt="icon"/>
-                        </div>
-                        <span>Triết lý giáo dục:
-                                <strong>Học để ứng dụng - Học từ thực tiễn</strong></span>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="icon"/>
-                        </div>
-                        <span>Học phí dự kiến năm học 2025-2026:
-                                <strong>Học phí 3.000.000 đ/tháng</strong></span>
-                    </div>
-                </div>
-
-                <div class="qr-fixed">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=7510406&size=100x100"
-                         alt="QR Code"/>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="section">
-            <h2>Mục tiêu đào tạo</h2>
-            <div class="box">
-                <ul>
-                    <li>Trang bị cho sinh viên những kiến thức chuyên môn toàn diện của ngành Khoa học và công nghệ thực phẩm để áp dụng cho công tác quản lý, kiểm định chất lượng, công nghệ chế biến, bảo quản cũng như tiêu dùng thực phẩm, dinh dưỡng thực phẩm và văn hóa ẩm thực của con người
-                    </li>
-                    <li>Có kỹ năng thực hành, phân tích và đánh giá, chế biến và bảo quản thực phẩm, vận dụng kiến thức vào thực tế, phát triển bản thân.
-                    </li>
-                    <li>Nắm vững nguyên lý, quy luật tự nhiên, kiến thức cơ bản về khoa học xã hội, chính trị và pháp luật để vận dụng trong lĩnh vực Khoa học và Công nghệ thực phẩm
-                    </li>
-                    <li>Có khả năng làm việc độc lập và làm việc nhóm, tự chủ, sáng tạo, trách nhiệm và đạo đức nghề nghiệp, sẵn sàng phục vụ cộng đồng
+                    <li>Có khả năng làm việc độc lập và làm việc nhóm, tự chủ, sáng tạo, trách nhiệm và đạo đức nghề
+                        nghiệp, sẵn sàng phục vụ cộng đồng
                     </li>
                 </ul>
             </div>
@@ -1392,15 +1450,22 @@
                 <ul>
                     <li>
                         <hr>
-                        Trong thời gian đào tạo sinh viên được đi thực tập (có trả lương) tại các công ty lớn về thực phẩm như Doveco, CP Group, Nutifood, Number one… và có cơ hội được nhận vào làm việc sau khi tốt nghiệp.
+                        Trong thời gian đào tạo sinh viên được đi thực tập (có trả lương) tại các công ty lớn về thực
+                        phẩm
+                        như Doveco, CP Group, Nutifood, Number one… và có cơ hội được nhận vào làm việc sau khi tốt
+                        nghiệp.
                     </li>
                     <li>
                         <hr>
-                        Làm việc tại các cơ quan quản lí nhà nước, các đơn vị kiểm nghiệm, kiểm tra, giám sát đánh giá an toàn thực phẩm, tư vấn quản lý và dinh dưỡng thực phẩm
+                        Làm việc tại các cơ quan quản lí nhà nước, các đơn vị kiểm nghiệm, kiểm tra, giám sát đánh giá
+                        an
+                        toàn thực phẩm, tư vấn quản lý và dinh dưỡng thực phẩm
                     </li>
                     <li>
                         <hr>
-                        Công tác tại các trường đại học, viện nghiên cứu, các doanh nghiệp về lĩnh vực khoa học và công nghệ thực phẩm
+                        Công tác tại các trường đại học, viện nghiên cứu, các doanh nghiệp về lĩnh vực khoa học và công
+                        nghệ
+                        thực phẩm
                     </li>
 
                 </ul>
@@ -1415,7 +1480,7 @@
                 </div>
                 <div class="credit-value">131</div>
             </div>
-            <img class="atom" src="env_sci_imgs/atom.png" alt="">
+            <img class="atom" src="./book.png" alt="">
 
             <div class="title">
                 <div class="section-title">Các hướng đào tạo chuyên sâu</div>
@@ -1430,7 +1495,7 @@
                 <div class="list-item">Văn hóa ẩm thực và dịch vụ lữ hành</div>
             </div>
             <div class="box">
-                <img src="env_sci_imgs/girl_books.png" alt="">
+                <img src="./studying.png" alt="">
                 <div class="wrapper-score">
                     <div class="section-title">Điểm chuẩn các năm gần đây</div>
 
@@ -1460,7 +1525,7 @@
                 Học bổng khuyến khích của trường và ĐHQGHN
             </div>
             <div class="item">
-                Học bổng từ các nhà tài: Toshiba, Honda, Mitsubishi...
+                Học bổng từ các nhà tài: BIDV, Yakult, K-T...
             </div>
             <div class="item">
                 Học bổng hỗ trợ sinh viên thuộc diện gia đình chính sách, dân tộc thiểu số, hộ nghèo...
